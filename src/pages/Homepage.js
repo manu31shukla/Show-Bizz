@@ -28,7 +28,7 @@ function ShowCard({ show }) {
       <img src={image?.medium} alt={name} />
       <h3>{name}</h3>
       <div dangerouslySetInnerHTML={{ __html: summary }} />
-      <button className='button-56'>View Summary</button>
+      <button className='button-73'>View Summary</button>
     </div>
   );
 }

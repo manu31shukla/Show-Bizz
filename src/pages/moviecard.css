@@ -4,7 +4,7 @@
     display: inline-block;
     width: 400px;
     margin: 50px;
-    height: 600px;
+    height: 650px;
     border: 1px solid #ccc;
     border-radius: 5px;
     overflow: hidden;
@@ -17,71 +17,55 @@
   }
   
   .show-card h3 {
-    margin: 10px;
+    margin: 20px;
     font-size: 1.5rem;
     font-weight: bold;
   }
   
-  .dangerouslySetInnerHTML {
-    margin: 10px;
-    font-size: 0.5rem;
+  .summary {
+    margin: 50px;
+    font-size: 1rem;
   }
   
-
-  .button-56 {
-    align-items: center;
-    background-color: #fee6e3;
-    border: 2px solid #111;
-    border-radius: 8px;
+  .button-73 {
+    margin: 20px;
+    appearance: none;
+    background-color: #FFFFFF;
+    border-radius: 100em;
+    border-style: none;
+    box-shadow: #ADCFFF 0 -12px 6px inset;
     box-sizing: border-box;
-    color: #111;
+    color: #000000;
     cursor: pointer;
-    display: flex;
-    font-family: Inter,sans-serif;
-    font-size: 16px;
-    height: 48px;
-    justify-content: center;
-    line-height: 24px;
-    max-width: 100%;
-    padding: 0 25px;
-    position: relative;
+    display: inline-block;
+    font-family: -apple-system,sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: -.10px;
+    outline: none;
+    padding: 1rem 1.3rem;
+    quotes: auto;
     text-align: center;
     text-decoration: none;
+    transition: all .15s;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
   }
   
-  .button-56:after {
-    background-color: #111;
-    border-radius: 8px;
-    content: "";
-    display: block;
-    height: 48px;
-    left: 0;
-    width: 100%;
-    position: absolute;
-    top: -2px;
-    transform: translate(8px, 8px);
-    transition: transform .2s ease-out;
-    z-index: -1;
+  .button-73:hover {
+    background-color: #29c2ff;
+    box-shadow: #55b8f1 0 -6px 8px inset;
+    transform: scale(1.100);
   }
   
-  .button-56:hover:after {
-    transform: translate(0, 0);
-  }
-  
-  .button-56:active {
-    background-color: #ffdeda;
-    outline: 0;
-  }
-  
-  .button-56:hover {
-    outline: 0;
+  .button-73:active {
+    transform: scale(1.025);
   }
   
   @media (min-width: 768px) {
-    .button-56 {
-      padding: 0 40px;
+    .button-73 {
+      font-size: 1.5rem;
+      padding: .75rem 2rem;
     }
   }
