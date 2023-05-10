@@ -28,9 +28,9 @@
   }
   
   .button-73 {
-    margin: 20px;
+    margin-left: 75px;
+    margin-top: 20px;
     appearance: none;
-    background-color: #FFFFFF;
     border-radius: 100em;
     border-style: none;
     box-shadow: #ADCFFF 0 -12px 6px inset;
@@ -39,11 +39,11 @@
     cursor: pointer;
     display: inline-block;
     font-family: -apple-system,sans-serif;
-    font-size: 1rem;
+    font-size: 0.1rem;
     font-weight: 600;
-    letter-spacing: -.10px;
+    letter-spacing: -.9px;
     outline: none;
-    padding: 1rem 1.3rem;
+    padding: 1rem 1rem;
     quotes: auto;
     text-align: center;
     text-decoration: none;
@@ -55,7 +55,7 @@
   
   .button-73:hover {
     background-color: #29c2ff;
-    box-shadow: #55b8f1 0 -6px 8px inset;
+    box-shadow: #55b8f1 0 -4px 4px inset;
     transform: scale(1.100);
   }
   

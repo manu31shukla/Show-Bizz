@@ -1,6 +1,7 @@
-# Movie App
-This is a movie app that displays a list of movies and their details. It allows users to browse and search for movies, view their details, and add new movies to the list.
-## [Link](https://warm-treacle-c7f71b.netlify.app/)
+# Show-rizz
++ This is a movie app that displays a list of movies and their details. It allows users to browse and search for movies, view their details, and add new movies to the list.
+- Made using [tvmaze api](https://api.tvmaze.com/search/shows?q=all)
+## [Link to Show-Rizz](https://warm-treacle-c7f71b.netlify.app/)
 ## Getting Started
 To get started with the movie app, clone this repository to your local machine and install the necessary dependencies:
 
