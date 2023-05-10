@@ -1,0 +1,45 @@
+.navbar {
+padding: 1rem;
+}
+
+
+.navbar__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.nav__brand a {
+  font-size: 1.4rem;
+  color: #1badb0;
+  text-decoration: none;
+}
+
+.nav__brand a:hover {
+  color: #fffdff;
+}
+
+.nav__links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.links__link a {
+  display: block;
+  padding: 1rem;
+  color: #f4f4f4;
+  text-decoration: none;
+  margin-left: 0.5rem;
+  border: 2px solid #0e6567;
+  font-size: 20px;
+}
+
+.links__link a:hover,
+.links__link a:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+  border-bottom: 1px solid #0e6567;
+  color: #0e6567;
+}

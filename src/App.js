@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'; //added after npm i -D react-router-dom
+//used for rendering components such that single page application doesn't seem single page depending on route
+import './App.css'; 
 
-function App() {
+//components import
+import Navbar from './components/navbar/Navbar';
+
+//pages import 
+import Homepage from './pages/Homepage';
+import Aboutpage from './pages/Aboutpage';
+import Showdetails from './pages/Showdetails';
+
+
+function App(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>
+    <div className='App'>
+      {/* Navbar */}
+      <Navbar />
+      <div className="container">
+        <Routes>
+          {/* route for Home page */}
+          <Route exact path='/' Component={Homepage}/>
+
+          {/* route for About page */}
+          <Route exact path='Aboutpage' Component={Aboutpage}/>
+          
+          {/* route for Show details page */}
+          <Route path="/details/:id" component={Showdetails} /> 
+          
+      </Routes>
+      </div>
     </div>
+    </Router>
   );
 }
 
