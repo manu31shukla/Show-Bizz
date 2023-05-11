@@ -27,10 +27,10 @@ function App(){
           <Route exact path='Aboutpage' Component={Aboutpage}/>
           
           {/* route for Show details page */}
-          <Route path="/show/:id" component={Showdetails} /> 
+          <Route path="/show/:showId" element={<Showdetails/>} /> 
 
           {/* route for Booking form */}
-          <Route path="/book/:id" component={BookingForm} /> 
+          <Route path="/book/:id" element={<BookingForm/>} /> 
           
       </Routes>
       </div>

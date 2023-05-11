@@ -1,6 +1,5 @@
 
-.show-card {
-    
+.show-card {   
     display: inline-block;
     width: 400px;
     margin: 50px;
@@ -28,14 +27,14 @@
   }
   
   .button-73 {
-    margin-left: 75px;
+    margin-left: 80px;
     margin-top: 20px;
     appearance: none;
     border-radius: 10em;
     border-style: none;
     box-shadow: #ADCFFF 0 -12px 6px inset;
     box-sizing: border-box;
-    color: #000000;
+    color: #f9f4f4;
     cursor: pointer;
     display: inline-block;
     font-family: -apple-system,sans-serif;
@@ -54,7 +53,7 @@
   }
   
   .button-73:hover {
-    background-color: #29c2ff;
+    background-color: #1badb0;
     box-shadow: #55b8f1 0 -4px 4px inset;
     transform: scale(1.055);
   }

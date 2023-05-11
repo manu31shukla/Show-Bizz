@@ -1,48 +1,53 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import "./Showdetails.css";
 
 function Showdetails() {
   const { showId } = useParams();
   const [showDetails, setShowDetails] = useState(null);
+  const [genres, setGenres] = useState([]);
 
   useEffect(() => {
     fetch(`https://api.tvmaze.com/shows/${showId}`)
       .then(response => response.json())
       .then(data => {
         setShowDetails(data);
+        setGenres(data.genres);
       })
       .catch(error => {
         console.error(error);
       });
   }, [showId]);
 
-  const handleBooking = () => {
-    localStorage.setItem('showName', showDetails.name);
-    localStorage.setItem('showImage', showDetails.image.medium);
-    localStorage.setItem('showSummary', showDetails.summary);
-  };
 
   if (!showDetails) {
-    return <div>Loading...</div>;
+    return <div className='load'>Loading...</div>;
   }
 
   return (
-    <div className="container mt-4">
-      <div className="row">
-        <div className="col-md-4 mb-4">
-          <img src={showDetails.image?.medium} className="img-fluid" alt={showDetails.name} />
-        </div>
-        <div className="col-md-8 mb-4">
-          <h2>{showDetails.name}</h2>
-          <p>{showDetails.summary}</p>
-          <button onClick={handleBooking} className="btn btn-primary">
+    <div className="show-details">
+      <img src={showDetails.image?.medium} alt={showDetails.name} className="show-image" />
+      <div className="show-info">
+        <h1 className="show-title">{showDetails.name}</h1>
+        <div className="show-summary" dangerouslySetInnerHTML={{ __html: showDetails.summary }}></div>
+          <div className="genres">
+
+            {genres.map((genre, index) => (
+              <span key={index} className="badge bg-secondary me-1">
+                {genre}
+              </span>
+            ))}
+            </div>
+          
+        </div><br/><br/>
+        <div className="wrapper">
+          <Link to="BookingForm" className="btn1">
             Book Tickets
-          </button>
-          <Link to="/" className="btn btn-secondary ml-2">
+          </Link>
+          <Link to="/" className="btn2">
             Go Back
           </Link>
-        </div>
-      </div>
+          </div>
     </div>
   );
 }

@@ -18,6 +18,7 @@ padding: 1rem;
 
 .nav__brand a:hover {
   color: #fffdff;
+  box-shadow: 0 0.5em 0.5em -0.4em #0d5a5b;
 }
 
 .nav__links {
@@ -32,14 +33,15 @@ padding: 1rem;
   color: #f4f4f4;
   text-decoration: none;
   margin-left: 0.5rem;
-  border: 2px solid #0e6567;
+  border: 2px solid #1badb0;
   font-size: 20px;
 }
 
 .links__link a:hover,
 .links__link a:focus {
-  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  background-color: #1badb0;
+  box-shadow: 0 0.5em 0.5em -0.4em #0d5a5b;
   transform: translateY(-0.25em);
-  border-bottom: 1px solid #0e6567;
-  color: #0e6567;
+  border-bottom: 1px solid #010101;
+  color: #000000;
 }
