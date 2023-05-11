@@ -9,6 +9,7 @@ import Navbar from './components/navbar/Navbar';
 import Homepage from './pages/Homepage';
 import Aboutpage from './pages/Aboutpage';
 import Showdetails from './pages/Showdetails';
+import BookingForm from './pages/BookingForm';
 
 
 function App(){
@@ -26,7 +27,10 @@ function App(){
           <Route exact path='Aboutpage' Component={Aboutpage}/>
           
           {/* route for Show details page */}
-          <Route path="/details/:id" component={Showdetails} /> 
+          <Route path="/show/:id" component={Showdetails} /> 
+
+          {/* route for Booking form */}
+          <Route path="/book/:id" component={BookingForm} /> 
           
       </Routes>
       </div>

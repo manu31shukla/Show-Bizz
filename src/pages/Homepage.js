@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './moviecard.css';
+import { Link } from 'react-router-dom';
 
 function Homepage() {
   const [shows, setShows] = useState([]);
@@ -28,7 +29,7 @@ function ShowCard({ show }) {
       <img src={image?.medium} alt={name} />
       <h3>{name}</h3>
       <div dangerouslySetInnerHTML={{ __html: summary }} />
-      <button className='button-73'>View Summary</button>
+      <Link to={`/show/${show.id}`} className='button-73'>View Summary</Link>
     </div>
   );
 }
