@@ -30,7 +30,7 @@ function App(){
           <Route path="/show/:showId" element={<Showdetails/>} /> 
 
           {/* route for Booking form */}
-          <Route path="/book/:showId" element={<BookingForm/>} /> 
+          <Route path="/book/:showDetails" element={<BookingForm/>} /> 
           
       </Routes>
       </div>

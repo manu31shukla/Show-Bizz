@@ -44,7 +44,7 @@ function Showdetails() {
           
         </div><br/><br/>
         <div className="wrapper">
-          <Link to={`/book/${showDetails.id}`}  className="btn1">
+          <Link to={`/book/${showId}`}  className="btn1">
             Book Tickets
           </Link>
           <Link to="/" className="btn2">
