@@ -1,12 +1,18 @@
 .show-details {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 2rem auto;
   max-width: 800px;
   padding: 1rem;
-}
+  background: rgb(1, 22, 22);
 
+}
+.load{
+   text-align: center;
+   font-size: larger;
+}
 .show-details img {
   width: 100%;
   max-width: 500px;

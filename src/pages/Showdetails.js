@@ -30,6 +30,9 @@ function Showdetails() {
       <div className="show-info">
         <h1 className="show-title">{showDetails.name}</h1>
         <div className="show-summary" dangerouslySetInnerHTML={{ __html: showDetails.summary }}></div>
+        <p><strong>Language: </strong>{showDetails.language}</p>
+        <p><strong>Premiered:</strong> {showDetails.premiered}</p>
+        <p><strong>Rating:</strong> {showDetails.rating.average}/10</p>
           <div className="genres">
 
             {genres.map((genre, index) => (
@@ -41,7 +44,7 @@ function Showdetails() {
           
         </div><br/><br/>
         <div className="wrapper">
-          <Link to="BookingForm" className="btn1">
+          <Link to={`/book/${showDetails.id}`}  className="btn1">
             Book Tickets
           </Link>
           <Link to="/" className="btn2">

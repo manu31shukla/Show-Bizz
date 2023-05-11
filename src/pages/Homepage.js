@@ -28,7 +28,8 @@ function ShowCard({ show }) {
     <div className="show-card">
       <img src={image?.medium} alt={name} />
       <h3>{name}</h3>
-      <div dangerouslySetInnerHTML={{ __html: summary }} />
+      <div className="summury">
+      <div dangerouslySetInnerHTML={{ __html: summary }} /></div>
       <Link to={`/show/${show.id}`} className='button-73'>View Summary</Link>
     </div>
   );

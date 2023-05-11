@@ -1,39 +1,42 @@
 import React, { useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import './BookingForm.css';
 
-function BookingForm() {
-  const { id } = useParams();
-  const navigate = useNavigate();
-  const [formData, setFormData] = useState({ name: '', email: '', phone: '' });
+const BookingForm = ({ showId }) => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
 
-  const handleInputChange = e => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    localStorage.setItem(`movie_${id}`, JSON.stringify(formData));
-    navigate(`/booking-confirmation/${id}`);
-  };
+    // Save user details in localStorage
+    localStorage.setItem(`show${showId}_name`, name);
+    localStorage.setItem(`show${showId}_email`, email);
+    localStorage.setItem(`show${showId}_phone`, phone);
+
+    // Reset form fields
+    setName('');
+    setEmail('');
+    setPhone('');
+  }
 
   return (
-    <div className="container">
-      <h1 className="mb-4">Book Tickets</h1>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label htmlFor="name" className="form-label">Name</label>
-          <input type="text" className="form-control" id="name" name="name" value={formData.name} onChange={handleInputChange} required />
+    <div className="booking-form-container">
+      <h2>Book Ticket for Show {showId}</h2>
+      <form className="booking-form" onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="name">Name:</label>
+          <input type="text" id="name" value={name} onChange={(event) => { setName(event.target.value) }} required />
         </div>
-        <div className="mb-3">
-          <label htmlFor="email" className="form-label">Email</label>
-          <input type="email" className="form-control" id="email" name="email" value={formData.email} onChange={handleInputChange} required />
+        <div className="form-group">
+          <label htmlFor="email">Email:</label>
+          <input type="email" id="email" value={email} onChange={(event) => { setEmail(event.target.value) }} required />
         </div>
-        <div className="mb-3">
-          <label htmlFor="phone" className="form-label">Phone Number</label>
-          <input type="tel" className="form-control" id="phone" name="phone" value={formData.phone} onChange={handleInputChange} required />
+        <div className="form-group">
+          <label htmlFor="phone">Phone:</label>
+          <input type="tel" id="phone" value={phone} onChange={(event) => { setPhone(event.target.value) }} required />
         </div>
-        <button type="submit" className="btn btn-primary">Book Now</button>
+        <button type="submit">Book Ticket</button>
       </form>
     </div>
   );
