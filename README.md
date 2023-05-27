@@ -1,25 +1,41 @@
-# Show-rizz
-+ This is a movie app that displays a list of movies and their details. It allows users to browse and search for movies, view their details, and add new movies to the list.
-- Made using [tvmaze api](https://api.tvmaze.com/search/shows?q=all)
 ## [Link to Show-Rizz](https://warm-treacle-c7f71b.netlify.app/)
-## Getting Started
-To get started with the movie app, clone this repository to your local machine and install the necessary dependencies:
 
-`git clone https://github.com/your-username/movie-app.git`
-`cd movie-app`
-`npm install`
+## **Describe the project**
+This is a movie app that displays a list of movies and their details. It allows users to browse and search for movies, view their details, and add new movies to the list.
+Made using [tvmaze api](https://api.tvmaze.com/search/shows?q=all)
 
-## Running the App
-To run the movie app, use the following command:
+## Issue Type:
 
-`npm start`
+- [ ] Bug Report
+- [ ] Feature Request
+- [ ] Documentation
+- [x] New Project
 
-This will start the app on http://localhost:3000, where you can access it in your web browser.
+## **Additional context**
 
-## Using the App
-Once the app is running, you can browse and search for movies using the search bar at the top of the page. You can also click on a movie card to view its details, including its title, release date, director, and summary.
+-React JS application.
+-Implementation of the API and not just hardcode data from the API.
+-It has 2 screens at a minimum. One to display a few data and an image and another screen to show it’s summary.
+-The second screen has a button to book a movie ticket which will open a form with the movie name already present and a few relevant details.
+(Reload would not happen)
+(Use of local/session storage for storing user details)
+-Proper Component file structure.
 
-If you want to add a new movie to the list, click on the "Add Movie" button and fill out the form with the required details.
 
-## Contributing
-If you'd like to contribute to the movie app, feel free to submit a pull request. Before doing so, please make sure to read our contributing guidelines and code of conduct.
+## **Screenshots**
+
+- Home page 
+![Show Rizz - Google Chrome 27-05-2023 19_25_04](https://github.com/TusharKesarwani/Front-End-Projects/assets/82714021/c5f99c50-39c5-48ae-a5b9-f172c7164c76)
+
+
+- Show details page
+![Show Rizz - Google Chrome 27-05-2023 19_25_20](https://github.com/TusharKesarwani/Front-End-Projects/assets/82714021/a0ac0d41-8d9d-49ec-982a-255cb92bb9bf)
+
+- Book ticket page
+![Show Rizz - Google Chrome 27-05-2023 19_25_30](https://github.com/TusharKesarwani/Front-End-Projects/assets/82714021/7655d797-3ac8-49b2-919f-beec5d78b995)
+
+
+- About page
+![Show Rizz - Google Chrome 27-05-2023 19_25_38](https://github.com/TusharKesarwani/Front-End-Projects/assets/82714021/c2c60fa3-8903-4d2f-9102-53b40ab3288b)
+
+
