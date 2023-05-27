@@ -1,15 +1,9 @@
 ## [Link to Show-Rizz](https://warm-treacle-c7f71b.netlify.app/)
 
 ## **Describe the project**
-This is a movie app that displays a list of movies and their details. It allows users to browse and search for movies, view their details, and add new movies to the list.
+This is a shows app that displays a list of shows and their details. It allows users to scroll and search for shows, view their details, and book tickets for any show.
 Made using [tvmaze api](https://api.tvmaze.com/search/shows?q=all)
 
-## Issue Type:
-
-- [ ] Bug Report
-- [ ] Feature Request
-- [ ] Documentation
-- [x] New Project
 
 ## **Additional context**
 
